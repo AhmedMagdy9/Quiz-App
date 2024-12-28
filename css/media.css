@@ -1,0 +1,7 @@
+@media (max-width: 850px) { 
+
+    body{
+        background-size: contain;
+       background-repeat: no-repeat;
+    }
+ }
