@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz app</title>
+    <meta name="keywords" content="grid">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+
+ <!-- animate css                        -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<!-- animate css                        -->
+
+    <link rel="stylesheet" href="css/style.css">
+   <script src="js/bootstrap.bundle.min.js"></script>
+   
+    
+
+
+</head>
+<body>
+
+  <div id="btnCheckClose" class=" d-flex justify-content-end d-none">
+    
+  <button  class="btn btn-danger mt-5 me-5">close</button>
+
+</div>
+
+
+
+
+<div id="closeCard" class="d-none  castumPosition position-absolute top-0 end-0 start-0 bottom-0  z-3 d-flex justify-content-center align-items-center">
+  <div class="bg-white d-inline-block p-5 text-center rounded-3">
+    <i class="fa-regular fa-face-smile-beam fs-3 "></i>
+    <p>Do you really want to exit the game?</p>
+    <button id="btnClose" class="btn btn-outline-danger me-3">yas</button>
+    <button id="btnCancel" class="btn btn-outline-dark">cancel</button>
+  </div>
+</div>
+  
+ 
+
+  <div class="container">
+  <div class="text-center py-5 ">
+    <div class="heading mt-5 animate__animated animate__fadeInDown">
+      <h1>Quiz App</h1>
+    </div>
+  </div>
+
+
+  <form id="quizForm" class="w-50 m-auto pt-5 animate__animated animate__fadeInLeft  " >
+    <div>
+    <label class="text-white " for="selectCat">choose category</label>
+    <select  id="selectCat" class="form-select py-3" >
+      <option selected  value="0">any category</option>
+      <option  value="21">Sports</option>
+      <option value="22">Geography</option>
+      <option value="27">Animals</option>
+      <option value="23">History</option>
+      <option value="25">ART</option>
+    </select>
+  </div>
+
+  <div>
+    <label class="text-white mt-3" for="selectDiff">choose difflicalty</label>
+    <select id="selectDiff" class="form-select py-3" >
+      <option selected  value="easy">esay</option>
+      <option  value="medium">medium</option>
+      <option value="Hard">Hard</option>
+    </select>
+  </div>
+
+ <div>
+ 
+    <input placeholder="number of Questions" class="form-control mt-4" type="number" name="" id="inpNum">
+  </div>
+    <button  id="startQuiz" class="btn btn-primary text-white w-100 mt-4">start</button>
+
+  </form>
+
+  </div>
+  <div id="questionsContainer"></div>
+
+
+  
+
+
+  
+
+
+  <script src="js/index.js"></script>
+</body>
+</html>

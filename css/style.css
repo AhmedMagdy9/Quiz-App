@@ -1,0 +1,135 @@
+body{
+  background-color: #000000;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect fill='none' stroke-width='1' id='a' x='-400' y='-300' width='800' height='600'/%3E%3C/defs%3E%3Cg transform='scale(0.667)' style='transform-origin:center'%3E%3Cg transform='rotate(57.6 0 0)' style='transform-origin:center'%3E%3Cg transform='rotate(-99.2 0 0)' style='transform-origin:center'%3E%3Cg transform='translate(1000 750)'%3E%3Cuse stroke='%23000' href='%23a' transform='rotate(6.2 0 0) scale(1.062)'/%3E%3Cuse stroke='%23000011' href='%23a' transform='rotate(12.4 0 0) scale(1.124)'/%3E%3Cuse stroke='%23000022' href='%23a' transform='rotate(18.6 0 0) scale(1.186)'/%3E%3Cuse stroke='%23000033' href='%23a' transform='rotate(24.8 0 0) scale(1.248)'/%3E%3Cuse stroke='%23000044' href='%23a' transform='rotate(31 0 0) scale(1.31)'/%3E%3Cuse stroke='%23000055' href='%23a' transform='rotate(37.2 0 0) scale(1.372)'/%3E%3Cuse stroke='%23000066' href='%23a' transform='rotate(43.4 0 0) scale(1.434)'/%3E%3Cuse stroke='%23000077' href='%23a' transform='rotate(49.6 0 0) scale(1.496)'/%3E%3Cuse stroke='%23000088' href='%23a' transform='rotate(55.8 0 0) scale(1.558)'/%3E%3Cuse stroke='%23000099' href='%23a' transform='rotate(62 0 0) scale(1.62)'/%3E%3Cuse stroke='%230000aa' href='%23a' transform='rotate(68.2 0 0) scale(1.682)'/%3E%3Cuse stroke='%230000bb' href='%23a' transform='rotate(74.4 0 0) scale(1.744)'/%3E%3Cuse stroke='%230000cc' href='%23a' transform='rotate(80.6 0 0) scale(1.806)'/%3E%3Cuse stroke='%230000dd' href='%23a' transform='rotate(86.8 0 0) scale(1.868)'/%3E%3Cuse stroke='%230000ee' href='%23a' transform='rotate(93 0 0) scale(1.93)'/%3E%3Cuse stroke='%2300F' href='%23a' transform='rotate(99.2 0 0) scale(1.992)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+}
+/* .bg-costum{
+  background-color: white;
+  display: inline-block;
+  padding: 20px 25px;
+  border-radius: 10px;
+} */
+
+.heading {
+  --radius: 10px;
+  width: fit-content;
+  padding: 6px;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: var(--radius);
+  margin-bottom: 50px;
+  text-align: center;
+  margin: auto;
+}
+
+.heading h1 {
+  font-size: 50px;
+  padding: 15px;
+  background-color: #fff;
+  font-family: "Electrolize", sans-serif;
+  border-radius: inherit;
+}
+
+.heading::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  scale: 1.1;
+  background-image: linear-gradient(#303dfcf7, #973dc1);
+  animation: spinning 7s infinite linear;
+  z-index: -1;
+  border-radius: inherit;
+}
+
+
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  75% {
+    transform: rotate(315deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate__animated.animate__zoomInDown {
+  --animate-duration: 1s;
+}
+
+.animate__animated.animate__fadeInBottomLeft {
+  --animate-duration: 1s;
+  --animate-delay: 1s;
+}
+
+
+.question {
+  background-color: #fff;
+  position: relative;
+}
+
+.question h2 {
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+}
+
+.choices {
+  gap: 10px;
+}
+
+.choices li {
+  --main-color: #434371;
+  width: calc((100% - 10px) / 2);
+  font-size: 19px;
+  font-weight: 600;
+  border-radius: 100vh;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  padding: 5px 12px;
+  transition: background-color 350ms, color 350ms;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choices li:hover {
+  background-color: var(--main-color);
+  color: #f1f1f1;
+}
+
+.question i {
+  cursor: pointer;
+}
+
+
+
+.correct,
+.correct:hover {
+  --main-color: #7cb518 !important;
+  background-color: var(--main-color);
+  color: #fff !important;
+}
+
+.wrong,
+.wrond:hover {
+  --main-color: #bf0603 !important;
+  background-color: var(--main-color);
+  color: #fff !important;
+}
+
+.castumPosition{
+  background-color: rgba(0, 0, 0, 0.833);
+}
+
+
